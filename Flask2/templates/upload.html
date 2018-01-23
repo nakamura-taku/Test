@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <canvas id="canvassample" width="600" height="600"></canvas>
+  <script type="text/javascript" src="./static/draw.js"></script>
+  <link rel="stylesheet" href="./static/draw.css">
+  <script>
+    var img2 = new Image();
+    img2.src = "static/head2.jpg";
+  </script>
+  <title>Upload new File</title>
+</head>
+<body onload="draw1()">
+  <h1>Upload new Hair of Your Avater</h1>
+  <script>
+    function draw1(){
+      var ctx2 = document.getElementById("canvassample").getContext("2d");
+      ctx2.drawImage(img2,0,0,600,600);
+    }
+  </script>
+  <div style="padding:10px">
+    <button type="button" onclick="clearCanvas()">リセット</button>
+  </div>
+  <div style="padding:10px">
+    <button type="button" onclick="chgImg()" value="1">画像変換</button>
+    <button type="button" onclick="saveImg()" value="1">保存</button>
+  </div>
+  <h2>画像出力</h2>
+  <div id="img-box"><img id="newImg"></div>
+</form>
+</body>
+</html>
